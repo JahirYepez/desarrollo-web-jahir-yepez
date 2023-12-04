@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/estilos-jahir-yepez.css" />
+    <link rel="shortcut icon" href="https://i.pinimg.com/564x/40/c0/2f/40c02fdf572beef100b8bf3c82942844.jpg" type="image/x-icon">
+    <title>Encuesta</title>
 </head>
+
 <body>
+    <div class="gonzalez">
+        <h1 class="t1">
+            Encuesta Demográfica de la Población
+        </h1>
+        <h2 class="t2">
+            Elaborador por: Jahir Yépez
+        </h2>
+        <form action="" method="post" id="gonzalez">
+            <div class="mb-3">
+                <label for="edad">Edad: </label>
+                <input type="number" min="0" max="80" name="edad" id="yepez-edad" placeholder="Edad" class="form-control"/>
+            </div>
+            <div class="mb-3">
+                <label for="sexo">Sexo: </label>
+                <select name="sexo" id="yepez-sexo" class="form-select">
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="educacion">Nivel de Educación: </label>
+                <select name="educacion" id="yepez-educacion" class="form-select">
+                    <option value="preescolar">Preescolar</option>
+                    <option value="primaria">Primaria</option>
+                    <option value="secunadria">Secundaria</option>
+                    <option value="bachillerato">Bachillerato</option>
+                    <option value="universidad">Universidad</option>
+                    <option value="posgrado">Posgrado</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="ocupacion">Ocupación: </label>
+                <input type="text" name="ocupacion" id="yepez-ocupacion" placeholder="Developer" class="form-control" />
+            </div>
+            <button type="button" class="btn btn-primary" onclick="enviarDatos()" id="enviarBtn">Enviar!</button>
+        </form>
+    </div>
     
-</body>
-</html>
+    <script src="script-jahir-yepez.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('enviarBtn').onclick = enviarDatos;
+        });
+    </script>
+    </body>
+    
+    </html>

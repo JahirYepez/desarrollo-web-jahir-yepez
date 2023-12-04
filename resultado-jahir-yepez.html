@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilos-jahir-yepez.css" />
+    <link rel="shortcut icon" href="https://i.pinimg.com/736x/47/80/d7/4780d793b244bb6e8fd8f90993010543.jpg" type="image/x-icon">
     <title>Document</title>
 </head>
 <body>
-    
+    <h1 class="t1">Formulario Enviado!</h1>
+    <div class="container">
+        <h2 class="t2">Resultados de la Encuesta</h2>
+        <div id="gonzalez" class="respuesta"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var params = new URLSearchParams(window.location.search);
+            var resultadosDiv = document.getElementById('gonzalez');
+            resultadosDiv.innerHTML = `
+                <p><strong>Edad:</strong> ${params.get('edad')}</p>
+                <p><strong>Sexo:</strong> ${params.get('sexo')}</p>
+                <p><strong>Nivel de Educación:</strong> ${params.get('educacion')}</p>
+                <p><strong>Ocupación:</strong> ${params.get('ocupacion')}</p>
+            `;
+        });
+    </script>
 </body>
 </html>

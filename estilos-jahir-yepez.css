@@ -1,0 +1,30 @@
+.t1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+
+.t2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: black;
+    font-style: oblique;
+    text-align: center;
+}
+
+.gonzalez{
+    padding: 30px;
+}
+
+.respuesta{
+    text-align: center;
+}
+
+ *{
+    background-color: antiquewhite;
+        @media (max-width: 1250px) {
+            background-color: aqua;
+        }
+ }
+
